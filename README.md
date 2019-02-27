@@ -4,7 +4,7 @@ To do:
 
 1. Add tests
 2. See if there is a gem that might help parse the user agent name
-3. Is application controller the best place to check the user agent? I chose it because I did not want to limit the ability to check on future routes
+3. Is application controller the best place to check the user agent? I chose it because I did not want to limit myself to any particular routes or actions.
 
 Challenges:
 
