@@ -1,0 +1,17 @@
+:ruby
+  user_agents = @user_agents || user_agents
+
+%table{:width => "90%"}
+  %tr
+    %th User Agent Name
+    %th Counter
+    %th First Created
+    %th Last Seen
+    - user_agents.each do |user_agent|
+      %tr
+        %td{:width => "40%"}= user_agent.name
+        %td{:width => "10%", :align => "center"}= user_agent.counter
+        %td{:width => "25%", :align => "center"}= user_agent.created_at
+        %td{:width => "25%", :align => "center"}= user_agent.updated_at
+
+= button_to "Refresh", user_agents_path, class: "update", remote: true, method: :get
